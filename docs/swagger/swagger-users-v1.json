@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "title": "Users"
   },
-  "host": "localhost:5000",
+  "host": "3.90.85.171",
   "basePath": "/v1/api/users",
   "schemes": [
     "http",

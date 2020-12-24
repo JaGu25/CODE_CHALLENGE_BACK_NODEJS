@@ -5,10 +5,9 @@ const app = express();
 
 const initializeServer = async () => {
     app.use(router);
-    app.listen(7000, () => {
+    app.listen(PORT, () => {
         console.log(`${APPLICATION_NAME} is running in ${PORT}`);
     });
-    return app;
 }
 
 module.exports = initializeServer; 
