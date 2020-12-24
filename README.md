@@ -1,27 +1,29 @@
-# Foobar
+# CODE CHALLENGE BACK_NODEJS  ANTONY ALBITES
 
-Foobar is a Python library for dealing with word pluralization.
+El proyecto está realizado justo a docker para un rápido despliegue.
 
-## Installation
+## Despliegue
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Esto se puede hacer a través de docker-compose
 
 ```bash
-pip install foobar
+docker-compose up --build -d
 ```
 
-## Usage
 
-```python
-import foobar
+## Pruebas Unitarias
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+Para realizar las pruebas es necesario descargar el código y ejecutar los siguientes comandos.
+
+```bash
+npm install
+npm run test
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Notas
 
-Please make sure to update tests as appropriate.
+Se está usando un base de datos MONGODB para pruebas.
 
+## Enlaces
+[CodigoDesplegado](http://3.90.85.171/v1/api/users/getUsers)
+[SwaggerDesplegado](http://3.90.85.171/v1/api/swagger/)
