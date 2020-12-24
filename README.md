@@ -2,6 +2,12 @@
 
 El proyecto está realizado justo a docker para un rápido despliegue.
 
+
+## Documentación
+
+Todo los documento están en la ruta "docs", el archivo postman y el swagger.
+
+
 ## Despliegue
 
 Esto se puede hacer a través de docker-compose
