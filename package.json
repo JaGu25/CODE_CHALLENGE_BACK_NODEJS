@@ -19,7 +19,9 @@
     "mongoose": "^5.9.27"
   },
   "devDependencies": {
+    "jest": "^26.6.3",
     "nodemon": "^2.0.4",
+    "supertest": "^6.0.1",
     "swagger-ui-express": "^4.1.4"
   }
 }

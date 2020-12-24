@@ -1,5 +1,6 @@
 const User = require("./../models/user.model");
 const Address = require("./../models/address.model");
+const { deleteUsersById } = require("../controllers/user.controller");
 
 const repository = {
 
@@ -20,9 +21,36 @@ const repository = {
         return user;
     },
 
+    getUsers: async () => {
+        const users = await User.find().populate("address");
+        return users;
+    },
+
     addressExists: async (id) => {
         const address = await Address.findOne({ id });
         return address;
+    },
+
+    updateUser: async (user, id, addressId) => {
+
+
+        const address = await Address.findOneAndUpdate({ id: addressId }, user.address);
+
+        user.address = address;
+
+        let updatedUser = await User.findOneAndUpdate({ id }, user, {
+            new: true
+        }).populate("address");
+
+        return updatedUser;
+
+    },
+
+    deleteUsersById: async (id) => {
+
+        const doc = await User.findOne({ id }).populate("address");
+        await doc.deleteOne();
+
     }
 
 

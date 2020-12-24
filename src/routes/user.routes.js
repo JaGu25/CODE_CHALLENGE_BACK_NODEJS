@@ -6,8 +6,7 @@ const validate = require('../validators/user.validate');
 router.get('/getUsers', controller.getUsers);
 router.post('/createUsers', validate.createUser, controller.createUser);
 router.get('/getUsersById/:userId', validate.idUser, controller.getUserById);
-router.put('/updateUsersById/:userId', controller.getUsers);
-router.delete('/deleteUsersById/:userId', controller.getUsers);
-
+router.put('/updateUsersById/:userId', validate.updateUser,controller.updateUserById);
+router.delete('/deleteUsersById/:userId',validate.idUser, controller.deleteUsersById);
 
 module.exports = router;
